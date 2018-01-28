@@ -46,6 +46,33 @@ public class Bike {
     }
 
     @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((bikeType == null) ? 0 : bikeType.hashCode());
+
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        Bike bike = (Bike) object;
+        if(bike == null) {
+            return false;
+        }
+        if(bikeList() == null) {
+            return false;
+        }
+        if(bike.getBikeType() == null) {
+            return false;
+        }
+        if(this == object) {
+            return true;
+        }
+        return true;
+    }
+
+    @Override
     public String toString() {
         return
                 bikeType;

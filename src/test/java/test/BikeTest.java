@@ -31,5 +31,23 @@ class BikeTest {
         System.out.println("testNotValidate Passed");
     }
 
+    @Test
+    void testEqualsMethod() {
+        Bike bike = new Bike();
+        assertFalse(bike == null);
+    }
+
+    @Test
+    void testEqualsMethod2() {
+        Bike bike = new Bike();
+        assertFalse(bike.equals(null));
+    }
+
+    @Test
+    void testSetBike() {
+        Bike bike = new Bike();
+        bike.setBikeType(Bike.childsBike);
+        assertFalse(bike.getBikeType().equals(null));
+    }
 
 }
