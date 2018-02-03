@@ -34,7 +34,7 @@ class BikeTest {
     @Test
     void testEqualsMethod() {
         Bike bike = new Bike();
-        assertFalse(bike == null);
+        assertFalse(bike.equals(bike));
     }
 
     @Test

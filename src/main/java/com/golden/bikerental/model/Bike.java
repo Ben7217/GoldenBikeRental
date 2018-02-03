@@ -25,7 +25,7 @@ public class Bike {
     public void setBikeType(String bikeType) {
         this.bikeType = bikeType;
     }
-    public static ArrayList<String> bikeList() {
+    public ArrayList<String> bikeList() {
         ArrayList<String> availableBikes = new ArrayList<>();
 
         availableBikes.add(Bike.highEnd);
@@ -39,38 +39,35 @@ public class Bike {
 
     public boolean validate ()
     {
-        if (bikeType == null) {
-            return false;
-        }
-        return true;
+        return bikeType != null;
     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((bikeType == null) ? 0 : bikeType.hashCode());
-
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        Bike bike = (Bike) object;
-        if(bike == null) {
-            return false;
-        }
-        if(bikeList() == null) {
-            return false;
-        }
-        if(bike.getBikeType() == null) {
-            return false;
-        }
-        if(this == object) {
-            return true;
-        }
-        return true;
-    }
+//    @Override
+//    public int hashCode() {
+//        final int prime = 31;
+//        int result = 1;
+//        result = prime * result + ((bikeType == null) ? 0 : bikeType.hashCode());
+//
+//        return result;
+//    }
+//
+//    @Override
+//    public boolean equals(Object object) {
+//        Bike bike = (Bike) object;
+//        if(bike == null) {
+//            return false;
+//        }
+//        if(bikeList() == null) {
+//            return false;
+//        }
+//        if(bike.getBikeType() == null) {
+//            return false;
+//        }
+//        if(this == object) {
+//            return true;
+//        }
+//        return true;
+//    }
 
     @Override
     public String toString() {
